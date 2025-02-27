@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="neutral_background">#F3EEE9</color>
+    <color name="neutral_surface">#776F69</color>
+    <color name="neutral_surface_30">#776F69</color> <!-- 20% transparency -->
+    <color name="neutral_text">#0A0A0A</color>
+
+    <color name="primary">#612A74</color>
+    <color name="secondary">#E8A089</color>
+    <color name="red">#CB4959</color>
 </resources>

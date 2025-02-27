@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">PavelKomarov</string>
+    <string name="text_view_description">Your text will appear here</string>
+    <string name="go_to_image_fragment">Go to Image Fragment</string>
+    <string name="go_to_text_fragment">Go to Text Fragment</string>
+    <string name="edit_text_hint">Start typing here…</string>
+    <string name="image_description">Red bengal flame</string>
 </resources>

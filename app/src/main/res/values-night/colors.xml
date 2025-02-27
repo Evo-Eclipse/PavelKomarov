@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="neutral_background">#0A0A0A</color>
+    <color name="neutral_surface">#7A808C</color>
+    <color name="neutral_surface_30">#7A808C</color> <!-- 32% transparency -->
+    <color name="neutral_text">#FFFFFF</color>
+
+    <color name="primary">#DF9ECD</color>
+    <color name="secondary">#FFC47F</color>
+    <color name="red">#FF929F</color>
+</resources>
