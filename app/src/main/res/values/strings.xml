@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">PavelKomarov</string>
+
+    <string name="form_name">Форма данных студента</string>
+    <string name="description_background">Фоновое изображение</string>
+
     <string name="hint_full_name">Введите ФИО</string>
     <string name="hint_group_number">Введите номер группы</string>
     <string name="hint_age">Введите возраст</string>
-    <string name="hint_grade">Введите оценку, которую хотите получить за практику</string>
+    <string name="hint_grade">Введите желаемую оценку</string>
     <string name="text_button_declarative">Переход декларативно</string>
     <string name="text_button_program">Переход программно</string>
     <string name="text_view_full_name">ФИО:\n</string>
