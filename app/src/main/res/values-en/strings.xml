@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PavelKomarov</string>
+
+    <string name="form_name">Student Data Form</string>
+    <string name="description_background">Background image</string>
+
+    <string name="hint_full_name">Enter full name</string>
+    <string name="hint_group_number">Enter group number</string>
+    <string name="hint_age">Enter age</string>
+    <string name="hint_grade">Enter desired grade</string>
+    <string name="text_button_declarative">Navigate declaratively</string>
+    <string name="text_button_program">Navigate programmatically</string>
+    <string name="text_view_full_name">Full name:\n</string>
+    <string name="text_view_group_number">Group number:\n</string>
+    <string name="text_view_age">Age:\n</string>
+    <string name="text_view_grade">Grade:\n</string>
+    <string name="text_button_return">Return</string>
+
+    <string name="full_name">Full name: %1$s</string>
+    <string name="group_number">Group number: %1$s</string>
+    <string name="age">Age: %1$s</string>
+    <string name="grade">Grade: %1$s</string>
+</resources>
