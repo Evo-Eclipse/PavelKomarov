@@ -5,19 +5,19 @@
     <string name="description_background">Фоновое изображение</string>
 
     <string name="hint_full_name">Введите ФИО</string>
-    <string name="hint_group_number">Введите номер группы</string>
-    <string name="hint_age">Введите возраст</string>
-    <string name="hint_grade">Введите желаемую оценку</string>
-    <string name="text_button_declarative">Переход декларативно</string>
-    <string name="text_button_program">Переход программно</string>
     <string name="text_view_full_name">ФИО:\n</string>
-    <string name="text_view_group_number">Номер группы:\n</string>
-    <string name="text_view_age">Возраст:\n</string>
-    <string name="text_view_grade">Оценка:\n</string>
     <string name="text_button_return">Вернуться</string>
 
     <string name="full_name">ФИО: %1$s</string>
-    <string name="group_number">Номер группы: %1$s</string>
-    <string name="age">Возраст: %1$s</string>
-    <string name="grade">Оценка: %1$s</string>
+
+    <string name="text_button_next">Далее</string>
+    <string name="hint_subject">Введите предмет для дополнительной записи</string>
+    <string name="text_button_enter_info">Ввести информацию</string>
+    <string name="schedule_instructions">Введите информацию о днях посещения:</string>
+    <string name="hint_day">День недели</string>
+    <string name="hint_time">Время</string>
+    <string name="hint_comments">Комментарии</string>
+    <string name="text_button_ok">OK</string>
+    <string name="user_subject_info">Студент: %1$s\nПредмет: %2$s</string>
+    <string name="schedule_info">Информация о дополнительном занятии:\nПредмет: %1$s\nДень: %2$s\nВремя: %3$s\nКомментарии: %4$s</string>
 </resources>

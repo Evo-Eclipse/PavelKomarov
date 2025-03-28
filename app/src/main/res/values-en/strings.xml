@@ -6,19 +6,18 @@
     <string name="description_background">Background image</string>
 
     <string name="hint_full_name">Enter full name</string>
-    <string name="hint_group_number">Enter group number</string>
-    <string name="hint_age">Enter age</string>
-    <string name="hint_grade">Enter desired grade</string>
-    <string name="text_button_declarative">Navigate declaratively</string>
-    <string name="text_button_program">Navigate programmatically</string>
     <string name="text_view_full_name">Full name:\n</string>
-    <string name="text_view_group_number">Group number:\n</string>
-    <string name="text_view_age">Age:\n</string>
-    <string name="text_view_grade">Grade:\n</string>
     <string name="text_button_return">Return</string>
-
     <string name="full_name">Full name: %1$s</string>
-    <string name="group_number">Group number: %1$s</string>
-    <string name="age">Age: %1$s</string>
-    <string name="grade">Grade: %1$s</string>
+
+    <string name="text_button_next">Next</string>
+    <string name="hint_subject">Enter subject for additional record</string>
+    <string name="text_button_enter_info">Enter information</string>
+    <string name="schedule_instructions">Enter attendance day information:</string>
+    <string name="hint_day">Day of week</string>
+    <string name="hint_time">Time</string>
+    <string name="hint_comments">Comments</string>
+    <string name="text_button_ok">OK</string>
+    <string name="user_subject_info">Student: %1$s\nSubject: %2$s</string>
+    <string name="schedule_info">Additional class information:\nSubject: %1$s\nDay: %2$s\nTime: %3$s\nComments: %4$s</string>
 </resources>
