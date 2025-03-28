@@ -1,23 +1,35 @@
 <resources>
     <string name="app_name">PavelKomarov</string>
 
-    <string name="form_name">Форма данных студента</string>
+    <!-- MainActivity -->
+    <string name="main_title">Демонстрация фрагментов</string>
+    <string name="btn_fragment1">Фрагмент 1</string>
+    <string name="btn_fragment2">Фрагмент 2</string>
+    <string name="btn_fragment3">Фрагмент 3</string>
+
+    <!-- FirstFragment -->
+    <string name="first_fragment_title">Первый фрагмент</string>
+    <string name="first_fragment_static_title">Первый фрагмент (Статический)</string>
+    <string name="first_fragment_description">Это статический фрагмент, добавленный через элемент &lt;fragment&gt; в XML</string>
+    <string name="btn_go_to_second">Перейти ко второму фрагменту</string>
+
+    <!-- SecondFragment -->
+    <string name="second_fragment_title">Второй фрагмент</string>
+    <string name="second_fragment_dynamic_title">Второй фрагмент (Динамический)</string>
+    <string name="second_fragment_description">Это динамический фрагмент, добавленный через FragmentManager</string>
+    <string name="hint_sample_input">Введите что-нибудь</string>
+    <string name="btn_go_to_third">Перейти к третьему фрагменту</string>
+    <string name="btn_back_to_first">Вернуться к первому фрагменту</string>
+
+    <!-- ThirdFragment -->
+    <string name="third_fragment_title">Третий фрагмент</string>
+    <string name="third_fragment_container_title">Третий фрагмент (FragmentContainerView)</string>
+    <string name="third_fragment_description">Это фрагмент, добавленный через FragmentContainerView</string>
+    <string name="sample_checkbox">Пример чекбокса</string>
+    <string name="btn_back_to_second">Вернуться ко второму фрагменту</string>
+    <string name="description_sample_image">Пример изображения</string>
+
+    <!-- Уже существующие строки -->
     <string name="description_background">Фоновое изображение</string>
 
-    <string name="hint_full_name">Введите ФИО</string>
-    <string name="text_view_full_name">ФИО:\n</string>
-    <string name="text_button_return">Вернуться</string>
-
-    <string name="full_name">ФИО: %1$s</string>
-
-    <string name="text_button_next">Далее</string>
-    <string name="hint_subject">Введите предмет для дополнительной записи</string>
-    <string name="text_button_enter_info">Ввести информацию</string>
-    <string name="schedule_instructions">Введите информацию о днях посещения:</string>
-    <string name="hint_day">День недели</string>
-    <string name="hint_time">Время</string>
-    <string name="hint_comments">Комментарии</string>
-    <string name="text_button_ok">OK</string>
-    <string name="user_subject_info">Студент: %1$s\nПредмет: %2$s</string>
-    <string name="schedule_info">Информация о дополнительном занятии:\nПредмет: %1$s\nДень: %2$s\nВремя: %3$s\nКомментарии: %4$s</string>
 </resources>
