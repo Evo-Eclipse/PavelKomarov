@@ -1,14 +1,25 @@
 package com.example.pavelkomarov
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.pavelkomarov.models.Category
 
 class MainActivity : AppCompatActivity() {
+
+    private val categories = listOf(
+        Category(1, "Фрукты"),
+        Category(2, "Овощи"),
+        Category(3, "Молочные продукты"),
+        Category(4, "Мясо")
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,43 +30,20 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Динамически добавляем второй фрагмент
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .add(R.id.fragment_container, SecondFragment())
-                .commit()
+        val listView = findViewById<ListView>(R.id.categoryListView)
+        val adapter = ArrayAdapter(
+            this,
+            android.R.layout.simple_list_item_1,
+            categories.map { it.name }
+        )
+        listView.adapter = adapter
+
+        listView.setOnItemClickListener { _, _, position, _ ->
+            val category = categories[position]
+            val intent = Intent(this, ProductsActivity::class.java)
+            intent.putExtra("CATEGORY_ID", category.id)
+            intent.putExtra("CATEGORY_NAME", category.name)
+            startActivity(intent)
         }
-
-        // Обработчики для кнопок навигации
-        findViewById<Button>(R.id.btnShowFirst).setOnClickListener {
-            navigateToFirstFragment()
-        }
-
-        findViewById<Button>(R.id.btnShowSecond).setOnClickListener {
-            navigateToSecondFragment()
-        }
-
-        findViewById<Button>(R.id.btnShowThird).setOnClickListener {
-            navigateToThirdFragment()
-        }
-    }
-
-    fun navigateToFirstFragment() {
-        // Первый фрагмент статический, поэтому переключаемся на него через видимость
-        findViewById<View>(R.id.fragment_static).visibility = View.VISIBLE
-        findViewById<View>(R.id.fragment_container).visibility = View.GONE
-        findViewById<View>(R.id.fragment_container_view).visibility = View.GONE
-    }
-
-    fun navigateToSecondFragment() {
-        findViewById<View>(R.id.fragment_static).visibility = View.GONE
-        findViewById<View>(R.id.fragment_container).visibility = View.VISIBLE
-        findViewById<View>(R.id.fragment_container_view).visibility = View.GONE
-    }
-
-    fun navigateToThirdFragment() {
-        findViewById<View>(R.id.fragment_static).visibility = View.GONE
-        findViewById<View>(R.id.fragment_container).visibility = View.GONE
-        findViewById<View>(R.id.fragment_container_view).visibility = View.VISIBLE
     }
 }
