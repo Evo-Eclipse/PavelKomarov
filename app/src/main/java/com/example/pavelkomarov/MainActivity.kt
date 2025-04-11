@@ -1,90 +1,100 @@
 package com.example.pavelkomarov
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Toast
+import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
 import com.example.pavelkomarov.databinding.ActivityMainBinding
-import com.example.pavelkomarov.models.SpinnerItem
+import com.example.pavelkomarov.fragments.HomeFragment
+import com.example.pavelkomarov.fragments.ProfileFragment
+import com.example.pavelkomarov.fragments.SettingsFragment
+import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding: ActivityMainBinding
-
-    private val spinnerItems = listOf(
-        SpinnerItem(1, "Android", "Мобильная операционная система, разработанная Google"),
-        SpinnerItem(2, "iOS", "Мобильная операционная система, разработанная Apple"),
-        SpinnerItem(3, "Windows", "Операционная система для персональных компьютеров от Microsoft"),
-        SpinnerItem(4, "macOS", "Операционная система для компьютеров Mac от Apple"),
-        SpinnerItem(5, "Linux", "Семейство свободных операционных систем с открытым исходным кодом"),
-        SpinnerItem(6, "Chrome OS", "Операционная система от Google, основанная на браузере Chrome")
-    )
-
-    private var selectedItem: SpinnerItem? = null
+    private lateinit var toggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         enableEdgeToEdge()
-        setContentView(binding.main)
-        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
+        setContentView(binding.root) // Изменено с binding.main на binding.root
+        ViewCompat.setOnApplyWindowInsetsListener(binding.mainContent) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Настраиваем адаптер для Spinner
-        val adapter = ArrayAdapter(
+        // Настройка тулбара
+        setSupportActionBar(binding.toolbar)
+
+        // Настройка DrawerLayout
+        toggle = ActionBarDrawerToggle(
             this,
-            android.R.layout.simple_spinner_item,
-            spinnerItems.map { it.name }
+            binding.drawerLayout,
+            binding.toolbar,
+            R.string.nav_drawer_open,
+            R.string.nav_drawer_close
         )
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        binding.spinner.adapter = adapter
+        binding.drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
 
-        // Обработчик события выбора элемента в Spinner
-        binding.spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                selectedItem = spinnerItems[position]
-                updateSelectedItemInfo()
-            }
+        // Настройка NavigationView
+        binding.navView.setNavigationItemSelectedListener(this)
 
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-                selectedItem = null
-                updateSelectedItemInfo()
-            }
-        }
-
-        // Обработчик нажатия на кнопку
-        binding.btnConfirm.setOnClickListener {
-            selectedItem?.let {
-                Toast.makeText(
-                    this@MainActivity,
-                    "Выбрано: ${it.name}",
-                    Toast.LENGTH_SHORT
-                ).show()
-            } ?: run {
-                Toast.makeText(
-                    this@MainActivity,
-                    "Ничего не выбрано",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
+        // По умолчанию показываем HomeFragment
+        if (savedInstanceState == null) {
+            replaceFragment(HomeFragment())
+            binding.navView.setCheckedItem(R.id.nav_home)
+            supportActionBar?.title = getString(R.string.title_home)
         }
     }
 
-    private fun updateSelectedItemInfo() {
-        selectedItem?.let {
-            binding.tvSelectedItem.text = it.name
-            binding.tvItemDescription.text = it.description
-        } ?: run {
-            binding.tvSelectedItem.text = "[Нет выбранного элемента]"
-            binding.tvItemDescription.text = ""
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nav_home -> {
+                replaceFragment(HomeFragment())
+                supportActionBar?.title = getString(R.string.title_home)
+            }
+            R.id.nav_profile -> {
+                replaceFragment(ProfileFragment())
+                supportActionBar?.title = getString(R.string.title_profile)
+            }
+            R.id.nav_settings -> {
+                replaceFragment(SettingsFragment())
+                supportActionBar?.title = getString(R.string.title_settings)
+            }
+            R.id.nav_projects -> {
+                // Переход на SecondActivity
+                val intent = Intent(this, SecondActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
+        binding.drawerLayout.closeDrawer(GravityCompat.START)
+        return true
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.nav_host_fragment, fragment)
+            .commit()
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() {
+        if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            binding.drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            @Suppress("DEPRECATION")
+            super.onBackPressed()
         }
     }
 }

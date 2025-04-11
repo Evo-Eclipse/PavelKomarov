@@ -2,35 +2,15 @@
 <resources>
     <string name="app_name">PavelKomarov</string>
 
-    <!-- MainActivity -->
-    <string name="main_title">Fragments Demonstration</string>
-    <string name="btn_fragment1">Fragment 1</string>
-    <string name="btn_fragment2">Fragment 2</string>
-    <string name="btn_fragment3">Fragment 3</string>
+    <!-- Common strings -->
+    <string name="nav_drawer_open">Open navigation drawer</string>
+    <string name="nav_drawer_close">Close navigation drawer</string>
 
-    <!-- FirstFragment -->
-    <string name="first_fragment_title">First Fragment</string>
-    <string name="first_fragment_static_title">First Fragment (Static)</string>
-    <string name="first_fragment_description">This is a static fragment added via &lt;fragment&gt; element in XML</string>
-    <string name="btn_go_to_second">Go to second fragment</string>
-
-    <!-- SecondFragment -->
-    <string name="second_fragment_title">Second Fragment</string>
-    <string name="second_fragment_dynamic_title">Second Fragment (Dynamic)</string>
-    <string name="second_fragment_description">This is a dynamic fragment added via FragmentManager</string>
-    <string name="hint_sample_input">Enter something</string>
-    <string name="btn_go_to_third">Go to third fragment</string>
-    <string name="btn_back_to_first">Back to first fragment</string>
-
-    <!-- ThirdFragment -->
-    <string name="third_fragment_title">Third Fragment</string>
-    <string name="third_fragment_container_title">Third Fragment (FragmentContainerView)</string>
-    <string name="third_fragment_description">This is a fragment added via FragmentContainerView</string>
-    <string name="sample_checkbox">Sample checkbox</string>
-    <string name="btn_back_to_second">Back to second fragment</string>
-    <string name="description_sample_image">Sample image</string>
-
-    <!-- Existing strings -->
-    <string name="description_background">Background image</string>
-
+    <!-- Section titles -->
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_projects">DevOps Projects</string>
+    <string name="title_statistics">Statistics</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

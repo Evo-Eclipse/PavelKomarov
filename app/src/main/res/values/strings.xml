@@ -1,35 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PavelKomarov</string>
 
-    <!-- MainActivity -->
-    <string name="main_title">Демонстрация фрагментов</string>
-    <string name="btn_fragment1">Фрагмент 1</string>
-    <string name="btn_fragment2">Фрагмент 2</string>
-    <string name="btn_fragment3">Фрагмент 3</string>
+    <!-- Общие строки -->
+    <string name="nav_drawer_open">Открыть навигационную панель</string>
+    <string name="nav_drawer_close">Закрыть навигационную панель</string>
 
-    <!-- FirstFragment -->
-    <string name="first_fragment_title">Первый фрагмент</string>
-    <string name="first_fragment_static_title">Первый фрагмент (Статический)</string>
-    <string name="first_fragment_description">Это статический фрагмент, добавленный через элемент &lt;fragment&gt; в XML</string>
-    <string name="btn_go_to_second">Перейти ко второму фрагменту</string>
-
-    <!-- SecondFragment -->
-    <string name="second_fragment_title">Второй фрагмент</string>
-    <string name="second_fragment_dynamic_title">Второй фрагмент (Динамический)</string>
-    <string name="second_fragment_description">Это динамический фрагмент, добавленный через FragmentManager</string>
-    <string name="hint_sample_input">Введите что-нибудь</string>
-    <string name="btn_go_to_third">Перейти к третьему фрагменту</string>
-    <string name="btn_back_to_first">Вернуться к первому фрагменту</string>
-
-    <!-- ThirdFragment -->
-    <string name="third_fragment_title">Третий фрагмент</string>
-    <string name="third_fragment_container_title">Третий фрагмент (FragmentContainerView)</string>
-    <string name="third_fragment_description">Это фрагмент, добавленный через FragmentContainerView</string>
-    <string name="sample_checkbox">Пример чекбокса</string>
-    <string name="btn_back_to_second">Вернуться ко второму фрагменту</string>
-    <string name="description_sample_image">Пример изображения</string>
-
-    <!-- Уже существующие строки -->
-    <string name="description_background">Фоновое изображение</string>
-
+    <!-- Названия разделов -->
+    <string name="title_home">Главная</string>
+    <string name="title_profile">Профиль</string>
+    <string name="title_settings">Настройки</string>
+    <string name="title_projects">DevOps проекты</string>
+    <string name="title_statistics">Статистика</string>
+    <string name="title_notifications">Уведомления</string>
 </resources>
