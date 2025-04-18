@@ -2,15 +2,20 @@
 <resources>
     <string name="app_name">PavelKomarov</string>
 
-    <!-- Общие строки -->
-    <string name="nav_drawer_open">Открыть навигационную панель</string>
-    <string name="nav_drawer_close">Закрыть навигационную панель</string>
+    <string name="image_description">Изображение бенгальского огонька</string>
 
-    <!-- Названия разделов -->
-    <string name="title_home">Главная</string>
-    <string name="title_profile">Профиль</string>
-    <string name="title_settings">Настройки</string>
-    <string name="title_projects">DevOps проекты</string>
-    <string name="title_statistics">Статистика</string>
-    <string name="title_notifications">Уведомления</string>
+    <!-- Новые строки -->
+    <string name="alert_dialog_title">Внимание</string>
+    <string name="alert_dialog_message">Вы действительно хотите продолжить?</string>
+    <string name="alert_dialog_positive">Да</string>
+    <string name="alert_dialog_negative">Нет</string>
+    <string name="alert_dialog_neutral">Позже</string>
+
+    <string name="date_time_format">Дата: %1$s\nВремя: %2$s</string>
+    <string name="date_time_not_set">Выбранная дата и время не заданы</string>
+
+    <string name="custom_dialog_result">Ваше сообщение: %1$s</string>
+    <string name="custom_dialog_no_input">Результат из пользовательского диалога</string>
+
+    <string name="alert_dialog_response">Вы выбрали: %1$s</string>
 </resources>
